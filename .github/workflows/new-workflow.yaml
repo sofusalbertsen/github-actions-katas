@@ -1,0 +1,13 @@
+name: new-workflow
+on: [workflow_dispatch]
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hej 
+        run: echo hello world
+      - name: Dump GitHub context
+        run: echo '${{ toJSON(github)}}'
+      - name: Dump GitHub context
+        run: echo '${{ toJSON(runner)}}'
